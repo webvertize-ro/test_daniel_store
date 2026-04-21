@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 import styled from 'styled-components';
 import { useContent } from '../hooks/useContent';
 import { c } from '../utils/content';
+import { useOutsideClick } from '../hooks/useOutsideClick';
 
 const StyledCookiePopup = styled.div`
   position: fixed;
@@ -55,7 +56,7 @@ function CookiePopup() {
         <div className="container">
           <Text>{c(contentMap, 'global.cookie-pop-up-paragraph')}</Text>
           <ButtonsContainer className="d-flex gap-1">
-            <Button onClick={() => handlePopup()}>
+            <Button onClick={() => handlePopup()} className="ok-cookie-pop-up">
               {c(contentMap, 'global.cookie-pop-up-button-1-text')}
             </Button>
             <Button to={c(contentMap, 'global.cookie-pop-up-button-2-route')}>

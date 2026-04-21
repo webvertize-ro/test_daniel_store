@@ -6,7 +6,11 @@ export function useOutsideClick(handler, listenCapturing = true) {
   useEffect(
     function () {
       function handleClick(e) {
-        if (ref.current && !ref.current.contains(e.target)) {
+        if (
+          ref.current &&
+          !ref.current.contains(e.target) &&
+          !e.target.classList.contains('ok-cookie-pop-up')
+        ) {
           handler();
         }
       }

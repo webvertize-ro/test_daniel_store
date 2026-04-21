@@ -47,8 +47,6 @@ function Accordion() {
     answer: c(contentMap, `cookies.accordion_item_${n}_answer`),
   }));
 
-  console.log('cookies: ', cookies);
-
   return (
     <StyledAccordion>
       <div className="container">
