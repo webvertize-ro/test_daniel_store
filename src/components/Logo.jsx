@@ -10,9 +10,7 @@ const StyledImg = styled.img`
 function Logo({ width }) {
   const { contentMap, isLoading, error } = useContent();
 
-  return (
-    <StyledImg width={width} src={c(contentMap, 'global.business_logo')} />
-  );
+  return <StyledImg width={width} src={c(contentMap, 'global.logo')} />;
 }
 
 export default Logo;
