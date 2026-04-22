@@ -5,6 +5,7 @@ import { c } from '../utils/content';
 
 const StyledImg = styled.img`
   max-width: ${(props) => (props.width ? props.width : '160px')};
+  max-height: 60px;
 `;
 
 function Logo({ width }) {
